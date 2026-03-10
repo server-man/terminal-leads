@@ -1,73 +1,39 @@
-# Welcome to your Lovable project
+# LEADGEN_OS
 
-## Project info
+> AI-powered lead generation dashboard with a Dark Terminal aesthetic.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+![Status](https://img.shields.io/badge/status-active-brightgreen) ![React](https://img.shields.io/badge/React-18-blue) ![Supabase](https://img.shields.io/badge/Supabase-connected-green)
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **🔐 Dual Authentication** — Email/password login + 4-digit PIN verification on every session
+- **📊 Real-time Leads Table** — Glass-morphism styled table with live Supabase subscriptions
+- **🤖 AI Agent Chat** — Streaming AI assistant for lead gen workflows and email templates
+- **💻 Terminal Interface** — Command-line input supporting `/scrape`, `/help`, `/clear`
+- **📡 System Status** — Live indicators for Bot and Apify connection status
+- **⚙️ Settings** — Profile management, PIN security, preferences, and built-in documentation
+- **📱 Mobile Compatible** — Responsive sidebar navigation with collapsible icon mode
 
-**Use Lovable**
+## Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **Frontend**: React + TypeScript + Vite + Tailwind CSS + shadcn/ui
+- **Backend**: Supabase (Auth, PostgreSQL, Edge Functions, Realtime)
+- **AI**: Gemini via streaming Edge Function
+- **Design**: Dark Terminal theme (JetBrains Mono + Space Grotesk)
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Getting Started
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Architecture
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+See [ARCHITECTURE.md](./ARCHITECTURE.md) for detailed system design.
 
-**Use GitHub Codespaces**
+## Project Info
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
