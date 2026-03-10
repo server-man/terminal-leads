@@ -81,7 +81,7 @@ export function AIChatPanel() {
   }
 
   return (
-    <div className="glass-panel flex flex-col h-full">
+    <div className="flex flex-col h-full"  style={{ minHeight: "calc(100vh - 49px)" }}>
       <div className="p-4 border-b border-border flex items-center gap-2">
         <Bot className="h-4 w-4 text-primary" />
         <span className="text-xs uppercase tracking-widest text-muted-foreground">AI Agent</span>
