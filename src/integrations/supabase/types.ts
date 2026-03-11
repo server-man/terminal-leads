@@ -14,6 +14,63 @@ export type Database = {
   }
   public: {
     Tables: {
+      audit_logs: {
+        Row: {
+          created_at: string
+          event_type: string
+          id: string
+          message: string
+          metadata: Json | null
+          severity: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          event_type: string
+          id?: string
+          message: string
+          metadata?: Json | null
+          severity?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          event_type?: string
+          id?: string
+          message?: string
+          metadata?: Json | null
+          severity?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      dead_switch: {
+        Row: {
+          activated_at: string | null
+          created_at: string
+          id: string
+          is_active: boolean
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          activated_at?: string | null
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          activated_at?: string | null
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       leads: {
         Row: {
           created_at: string
