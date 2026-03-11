@@ -1,4 +1,4 @@
-import { Database, Bot, Settings, Terminal, Activity, LogOut } from "lucide-react";
+import { Database, Bot, Settings, Terminal, Activity, LogOut, BarChart3, ShieldAlert } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useAuth } from "@/hooks/useAuth";
 import {
@@ -17,9 +17,11 @@ import { Button } from "@/components/ui/button";
 
 const navItems = [
   { title: "Dashboard", url: "/", icon: Activity },
+  { title: "Analytics", url: "/analytics", icon: BarChart3 },
   { title: "Leads", url: "/leads", icon: Database },
   { title: "AI Agent", url: "/agent", icon: Bot },
   { title: "Terminal", url: "/terminal", icon: Terminal },
+  { title: "Audits", url: "/audits", icon: ShieldAlert },
   { title: "Settings", url: "/settings", icon: Settings },
 ];
 

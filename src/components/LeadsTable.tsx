@@ -40,12 +40,39 @@ export function LeadsTable() {
 
   return (
     <div className="glass-panel overflow-hidden">
-      <div className="p-4 border-b border-border flex items-center gap-2">
-        <Database className="h-4 w-4 text-primary" />
+      <div className="p-3 sm:p-4 border-b border-border flex items-center gap-2">
+        <Database className="h-4 w-4 text-primary shrink-0" />
         <span className="text-xs uppercase tracking-widest text-muted-foreground">Leads Database</span>
         <span className="ml-auto text-xs text-muted-foreground">{leads.length} records</span>
       </div>
-      <div className="overflow-x-auto">
+
+      {/* Mobile card view */}
+      <div className="block sm:hidden divide-y divide-border">
+        {loading ? (
+          <p className="p-4 text-center text-muted-foreground text-xs">Loading...</p>
+        ) : leads.length === 0 ? (
+          <p className="p-4 text-center text-muted-foreground text-xs">No leads yet. Use /scrape [keyword] to start.</p>
+        ) : (
+          leads.map((lead) => (
+            <div key={lead.id} className="p-3 space-y-1">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-sm text-card-foreground truncate flex-1">{lead.email}</span>
+                <Badge variant="outline" className={`text-[10px] shrink-0 ${statusColors[lead.status] || statusColors.new}`}>
+                  {lead.status}
+                </Badge>
+              </div>
+              <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                <span>{lead.name || "—"}</span>
+                <span>•</span>
+                <span>{lead.niche || "—"}</span>
+              </div>
+            </div>
+          ))
+        )}
+      </div>
+
+      {/* Desktop table view */}
+      <div className="hidden sm:block overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border text-muted-foreground text-xs uppercase tracking-wider">

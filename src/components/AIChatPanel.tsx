@@ -81,12 +81,12 @@ export function AIChatPanel() {
   }
 
   return (
-    <div className="flex flex-col h-full"  style={{ minHeight: "calc(100vh - 49px)" }}>
-      <div className="p-4 border-b border-border flex items-center gap-2">
+    <div className="flex flex-col h-full" style={{ minHeight: "calc(100vh - 49px)" }}>
+      <div className="p-3 sm:p-4 border-b border-border flex items-center gap-2">
         <Bot className="h-4 w-4 text-primary" />
         <span className="text-xs uppercase tracking-widest text-muted-foreground">AI Agent</span>
       </div>
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 min-h-0">
+      <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-4 min-h-0">
         {messages.map((msg, i) => (
           <div key={i} className={`text-sm ${msg.role === "user" ? "text-foreground" : "text-card-foreground"}`}>
             <span className={`text-xs font-bold uppercase tracking-wider ${
@@ -106,14 +106,14 @@ export function AIChatPanel() {
           </div>
         )}
       </div>
-      <form onSubmit={sendMessage} className="p-3 border-t border-border flex gap-2">
+      <form onSubmit={sendMessage} className="p-2 sm:p-3 border-t border-border flex gap-2">
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Ask the agent..."
-          className="flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground font-mono"
+          className="flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground font-mono min-w-0"
         />
-        <Button type="submit" size="sm" variant="ghost" disabled={loading} className="text-primary hover:bg-primary/10">
+        <Button type="submit" size="sm" variant="ghost" disabled={loading} className="text-primary hover:bg-primary/10 shrink-0">
           <Send className="h-4 w-4" />
         </Button>
       </form>

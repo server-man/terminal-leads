@@ -8,9 +8,11 @@ import { ProtectedLayout } from "@/components/ProtectedLayout";
 import Auth from "./pages/Auth";
 import PinVerification from "./pages/PinVerification";
 import Dashboard from "./pages/Dashboard";
+import Analytics from "./pages/Analytics";
 import Leads from "./pages/Leads";
 import Agent from "./pages/Agent";
 import TerminalPage from "./pages/TerminalPage";
+import Audits from "./pages/Audits";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 import { Loader2 } from "lucide-react";
@@ -48,9 +50,11 @@ function AppRoutes() {
     <Routes>
       <Route element={<ProtectedLayout />}>
         <Route path="/" element={<Dashboard />} />
+        <Route path="/analytics" element={<Analytics />} />
         <Route path="/leads" element={<Leads />} />
         <Route path="/agent" element={<Agent />} />
         <Route path="/terminal" element={<TerminalPage />} />
+        <Route path="/audits" element={<Audits />} />
         <Route path="/settings" element={<Settings />} />
       </Route>
       <Route path="*" element={<NotFound />} />
